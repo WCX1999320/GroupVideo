@@ -11,7 +11,21 @@
             <h1> Welcome to Group Video</h1>
             <p>A group video calling application</p>
         </div>
+        <form id = "form">
+            <div class = "form-field">
+                <input type = "submit" value="Join Video"/>
+            </div>
+        </form>
     </section>
 
+
 </main>
+<script type="text/javascript">
+    let form = document.getElementById("form")
+    let handleSumbit = async(e) =>{
+        e.preventDefault()
+        window.open('/room','_self')
+    }
+    form.addEventListener('sumbit',handleSumbit)
+</script>
 {% endblock content %}
